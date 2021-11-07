@@ -5,10 +5,10 @@ const messages = []
 const router = new Router()
 router
   .get('/', (context) => {
-    context.respose.body = 'Chat server'
+    context.response.body = 'Chat server'
   })
   .get('/messages', (context) => {
-    context.respose.body = messages
+    context.response.body = messages
   })
   .post('/messages', async (context) => {
     const message = await context.request.body().value
